@@ -1,0 +1,35 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+	<div class="sidebar-collapse">
+		<ul side-navigation class="nav metismenu" id="side-menu">
+			<li class="nav-header">
+				<div class="dropdown profile-element" dropdown>
+					<img alt="image" class="img-circle" src="img/Mittal2.jpg" />
+					<a class="dropdown-toggle" dropdown-toggle href> 
+						<span class="clear"> 
+							<span class="block m-t-xs"> 
+								<strong class="font-bold">Mittal Patel</strong>
+								<span class="text-muted text-xs block">GPS Tracker Admin <b class="caret"></b></span>
+                            </span>
+							</span>
+						</span>
+					</a>
+					<ul class="dropdown-menu animated fadeInRight m-t-xs">
+                        <li><a ui-sref="profile">Profile</a></li>
+                        <li><a ui-sref="contacts">Contacts</a></li>
+                        <li><a ui-sref="inbox">Mailbox</a></li>
+                        <li class="divider"></li>
+                        <li><a ui-sref="login">Logout</a></li>
+                    </ul>
+				</div>
+			</li>
+			<li ui-sref-active="active">
+				<a ui-sref="gpstracker.userhome">
+					<i class="fa fa-globe"></i> 
+					<span class="nav-label">
+							{{ 'Find on Map' | translate }}
+					</span> 
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>

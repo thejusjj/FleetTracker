@@ -1,0 +1,45 @@
+<div ng-controller="UserHomeController">
+	<div class="row border-bottom white-bg dashboard-header">
+		<div class="col-sm-12">
+			<div class="search-form">
+	             <form action="index.html" method="get">
+	                 <div class="input-group">
+	                     <input type="text" placeholder="Enter Mobile Number (For Ex: 9898xxxxxx)" name="search" ng-model="mobileNumber" class="form-control input-lg">
+	                     <div class="input-group-btn">
+	                         <button class="btn btn-lg btn-primary" ng-click="getUserPosition()">
+	                             Search
+	                         </button>
+	                     </div>
+	                 </div>
+	             </form>
+				
+			</div>
+		</div>
+	</div>
+	<div class="wrapper wrapper-content animated fadeInRight">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="ibox ">
+					<div class="ibox-content">
+						<div class="google-map" style="height: 500px">
+							<ui-gmap-google-map center="map.center" zoom="map.zoom"
+								draggable="true" options="options"> <ui-gmap-marker
+								idkey="marker.id" coords="marker[0].coords"
+								options="marker.options" click="onClick()"
+								events="marker.events"> <ui-gmap-window
+								options="windowOptions" closeClick="closeClick()">
+							<div>{{title}}</div>
+							<ui-gmap-markers models="marker" idkey="marker.id" coords="'coords'" click="'onClick'" events="marker.events" >
+				            </ui-gmap-markers>
+				            </ui-gmap-google-map>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
